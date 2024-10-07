@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DRAWBRIDGE</title>
+  <link rel="stylesheet" href="home.css" />
+  <link rel="prefetch" href="login.html"/>
+  <script type="text/JavaScript" src="JavaScript/sendMessage.js"></script>
+  <script type="text/JavaScript" src="JavaScript/sideBar.js"></script>
+  <script type="text/JavaScript" src="JavaScript/app.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+
+<body onload="changeName()">
+  <div id="header" class="header">
+    <!-- used this for sidebar open and close https://www.w3schools.com/howto/howto_js_collapse_sidebar.asp -->
+    <div class="headerContainer buttons">
+      <button class="openbtn" id="openbtn" onclick="openNav()">See Contacts</button>
+      <br>
+      <form method="post" action="/logout">
+        <button class="signOutBtn" id="signOutBtn">Signout</button>
+      </form>
+    </div>
+
+    <div class="headerContainer welcomeText">
+      <h2>Hello, <span id="usersname"></span>!</h2>
+      <h1>Welcome to Drawbridge!</h1>
+    </div>
+  </div>
+  <div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <aside class="users">
+      <ul class="userlist">
+        <li class="user top" id="user:Arthur Morgan<">
+          <img src="images/arthur.png" alt="avatar" />
+          <div class="about">
+            <div class="name">Arthur Morgan</div>
+            <br>
+            <div class="status" id="activity"><i> Last seen 10h ago </i></div>
+          </div>
+          <dialog open>
+            <span id="recentMessage">No recent messages...</span>
+          </dialog>
+        </li>
+        <li class="user" id="user:Dutch Van Der Linde">
+          <img src="images/dutch.png" alt="avatar" />
+          <div class="about">
+            <div class="name">Dutch Van Der Linde</div>
+            <br>
+            <div class="status" id="activity"><i>Online</i></div>
+          </div>
+          <dialog open>
+            <span id="recentMessage">No recent messages...</span>
+          </dialog>
+        </li>
+        <li class="user" id="user:John Marston">
+          <img src="images/john.png" alt="avatar" />
+          <div class="about">
+            <div class="name">John Marston</div>
+            <br>
+            <div class="status" id="activity"><i> Last seen 6h ago</i></div>
+          </div>
+          <dialog open>
+            <span id="recentMessage">No recent messages...</span>
+          </dialog>
+        </li>
+        <li class="user" id="user:Micah Bell">
+          <img src="images/micah.png" alt="avatar" />
+          <div class="about">
+            <div class="name">Micah Bell</div>
+            <br>
+            <div class="status" id="activity"><i>Online</i></div>
+          </div>
+          <dialog open>
+            <span id="recentMessage">No recent messages...</span>
+          </dialog>
+        </li>
+        <li class="user" id="user:Javier Escuella">
+          <img src="images/javier.png" alt="avatar" />
+          <div class="about">
+            <div class="name">Javier Escuella</div>
+            <br>
+            <div class="status" id="activity"><i> Last seen 4h ago </i></div>
+          </div>
+          <dialog open>
+            <span id="recentMessage">No recent messages...</span>
+          </dialog>
+        </li>
+      </ul>
+    </aside>
+  </div>
+
+  <div id="main" class="msg-main">
+    <div class="msg-header">
+      <div class="container1">
+        <img src="images/micah.png" class="msgimg">
+        <div class="active ">
+          <p>Micah Bell</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="msg-Send">
+      <textarea id="mytextarea" readonly></textarea>
+      <div class="messaging">
+        <input type="text" id="txtSend" onkeydown="if(event.key=='Enter'){enterMessage()}" />
+        <button type="submit" id="btnSend" value="Send" onclick="CopyToLabel()"><img src="images/sendlogo.png"
+            height="31" width="auto"></button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

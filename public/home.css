@@ -1,0 +1,325 @@
+/* COLORS: DARK #273040,  LIGHT #DAD2D8, ACCENT #0F8B8D, WARNING #EC9A29, ERROR #AF0C0C  */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #273040;
+    color: white;
+}
+
+p {
+    font-family: Roboto Mono;
+}
+
+.welcomeText {
+    font-family: Roboto Mono;
+}
+
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li div {
+    display: inline-block;
+}
+
+li img {
+    border-radius: 50%;
+    float: left;
+    width: 53px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+aside {
+   margin:0;
+   width:100%;
+   color:white;
+}
+
+li div {
+    display: inline-block;
+}
+
+li img {
+    border-radius: 50%;
+    float: left;
+    width: 53px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+aside {
+    margin: 0;
+    width: 100%;
+    color: white;
+}
+
+.user {
+    height: 65px;
+    position: relative;
+    padding: 5px;
+}
+
+.user:hover {
+    background-color: #3d4451;
+}
+
+dialog {
+    visibility: hidden;
+    transform: translate(17em,-.4em);
+}
+
+dialog span {
+    font-style:italic;
+}
+
+.user:hover > dialog {
+    visibility: visible;
+}
+
+.name {
+    margin: 0;
+    margin-left: 10px;
+}
+
+.status {
+    margin-left: 10px;
+}
+
+.top {
+    margin-top: 30px;
+}
+
+.about {
+    padding: 0;
+    float: left;
+    margin: 0;
+    padding-left: 55px;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+textarea {
+    margin: 30px;
+    margin-bottom: .25em;
+    width: calc(100vw - 445px);
+    height: calc(100vh - 350px);
+    resize: none;
+    transition: .5s;
+    background-color: #41444c;
+    color:white;
+    border:none;
+}
+
+hr {
+    margin: 25px;
+}
+
+#txtName {
+    margin-left: 20px;
+}
+
+.sidebar {
+    height: 100%;
+    width: 270px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #14171d;
+    font-family: Roboto Mono;
+    font-size: 10pt;
+}
+
+.closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 30px;
+    margin-left: 50px;
+    margin-bottom: 15px;
+    z-index: 2;
+    text-decoration: none;
+}
+
+.msg-main {
+    margin-left: 300px;
+    transition: .5s;
+}
+
+h1 {
+    text-align: center;
+    margin-top: .25em;
+    margin-bottom: .25em;
+}
+
+h2 {
+    margin-bottom: .25em;
+}
+
+.msgimg {
+    width: 50px;
+    vertical-align: middle;
+    border-style: none;
+    border-radius: 100%;
+ }
+
+/* Styling the msg-header container */
+.msg-header {
+    color:white;
+    width: 97%;
+    height: 10%;
+    border-bottom: none;
+    display: inline-block;
+    background-color: #1b1d22;
+    margin: 0px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 5px;
+}
+
+.msg-Send {
+    width: 97%;
+    background-color: #1b1d22;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 5px;
+    padding-bottom: 10px;
+}
+
+.messaging {
+    display:flex;
+    align-items:center;
+
+}
+
+
+.msgimg {
+    margin-left: 2%;
+    float: left;
+}
+
+.container1 {
+    width: 270px;
+    height: auto;
+    float: left;
+    margin: 0;
+}
+
+/* styling user-name */
+.active {
+    width: 150px;
+    float: left;
+    font-weight: bold;
+    margin: 0 0 0 5px;
+    height: 10%;
+}
+
+#txtSend {
+    width: calc(100vw - 545px);
+    height: 50px;
+    font-size: large;
+    margin-left: 30px;
+    transition: .5s;
+    background-color: #41444c;
+    color:white;
+    border:none;
+}
+
+#btnSend {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 20px;
+    background-color: #0F8B8D;
+    color:white;
+    border:none;
+    border-radius: 5px;
+    margin-left:20px;
+}
+
+#btnSend:hover {
+    background-color: #71a7a9;
+}
+
+#btnSend:active {
+    background-color: #EC9A29;
+}
+
+ .users {
+    margin-top: 22px;
+}
+
+a {
+    color: #DAD2D8;
+    font-family: Roboto Mono;
+}
+
+a:link {
+    color: #DAD2D8;
+}
+
+/* visited link */
+a:visited {
+    color: #DAD2D8;
+}
+
+/* mouse over link */
+a:hover {
+    color: #0F8B8D;
+}
+
+/* selected link */
+a:active {
+    color: #EC9A29;
+}
+
+.signOutBtn {
+    text-align: right;
+    margin-left: 300px;
+}
+
+.welcomeText {
+    text-align: center;
+}
+
+.buttons {
+    text-align: left;
+    font-family: Roboto Mono;
+}
+
+dialog {
+    background-color: #14171d;
+    color:white;
+    border:none;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #0F8B8D;
+    border:none;
+    color:white;
+    border-radius:5px;
+    padding:3px;
+}

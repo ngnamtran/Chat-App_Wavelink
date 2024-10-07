@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DrawBridge Registration</title>
+  <link rel="stylesheet" href="loginAndRegister.css" />
+  <script type="text/JavaScript" src="JavaScript/app.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+</head>
+
+<body onload="checkForInvalidUsername()">
+  <div class="main">
+    <h1>DRAWBRIDGE</h1>
+    <!-- action="/register" -->
+    <form id="form" method="POST" action="/addUser" onsubmit="return check();"
+      enctype="application/x-www-form-urlencoded">
+      <input type="text" name="username" id="username" class="input userName" placeholder="username" />
+      <br>
+      <input type="password" name="password" id="password" class="input Password" placeholder="password"
+        onkeyup="checkPWComplexity()" />
+      <div class="showPW">
+        <label for="showPW-Checkbox"><strong>Show Password</strong></label>
+        <input type="checkbox" id="showPW-Checkbox" onclick='togglePW()' />
+      </div>
+      <br>
+      <input type="password" id="passwordConfirm" class="input Password confirm" placeholder="confirm password"
+        onkeyup='check()' />
+      <br>
+      <span class="checker" id='checker'>Enter your password</span>
+      <br>
+      <ul class="stengthChecker">
+        <li id="pwLength">Must have at least eight charecters</li>
+        <li id="pwLowerCase">Must have at least one lowercase letter</li>
+        <li id="pwUpperCase">Must have at least one uppercase letter</li>
+        <li id="pwNumbers">Must have at least one number</li>
+        <li id="pwSpecialChar">Must have at least one special charecter</li>
+      </ul>
+      <button type="submit" value="Submit" class="submitBut" id="submit">Submit</button>
+      <br>
+      <a href="login.html">Log In</a>
+    </form>
+  </div>
+</body>
+
+</html>

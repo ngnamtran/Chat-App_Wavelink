@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DRAWBRIDGE</title>
+  <link rel="stylesheet" href="loginAndRegister.css" />
+  <script type="text/JavaScript" src="JavaScript/app.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+</head>
+
+<body>
+  <h1>DRAWBRIDGE</h1>
+  <form id="form" action="/auth" method="post">
+    <input type="text" name="username" id="userName" class="input userName" placeholder="username" required />
+    <br>
+    <input type="password" name="password" id="password" class="input Password" placeholder="password"
+      onkeyup='check();' required />
+    <div class="showPW">
+      <strong>Show Password</strong>
+      <input class="pwbutton" type="checkbox" onclick='togglePW()'>
+    </div>
+    <br>
+    <a href="index.html">
+      <input type="submit" class="submitBut" value="Login" />
+    </a>
+    <br>
+    <a href="register.html">Register</a>
+  </form>
+  <br>
+  <img src="images/logo.png" />
+</body>
+
+</html>
